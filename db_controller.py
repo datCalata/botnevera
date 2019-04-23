@@ -15,7 +15,7 @@ def request_products():
     for row in db_info:
         lista_productos.append(row[0])
     close_connection(con)
-    print("LISTA DE PRODUCTOS: "+str(lista_productos))
+    #print("LISTA DE PRODUCTOS: "+str(lista_productos))
     return lista_productos
 
 def comprar(user_id,producto):
@@ -24,7 +24,7 @@ def comprar(user_id,producto):
     c.execute('SELECT precio FROM productos WHERE nombre=?',(producto,))
     db_info = c.fetchall()
     precio = db_info[0][0]
-    print(precio)
+    #print(precio)
     c.execute('SELECT dinero FROM Usuarios WHERE id=?',(user_id,))
     db_info = c.fetchall()
     dinero = round(db_info[0][0] - precio,2)

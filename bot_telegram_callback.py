@@ -84,7 +84,7 @@ def gen_productos_keyboard():
     lista_productos = db_controller.request_products()
     keyboard = []
     for elm in lista_productos:
-        print(elm)
+        #print(elm)
         keyboard.append([InlineKeyboardButton(str(elm),callback_data=str(elm))])
-    print(keyboard)
+    #print(keyboard)
     return keyboard
