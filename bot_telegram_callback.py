@@ -1,3 +1,4 @@
+# encoding: utf-8
 import telegram
 import db_controller
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler
@@ -18,7 +19,6 @@ Dispone de los siguientes comandos:
 /comprar despliega un menu con las opciones a comprar
  /dinero muestra su saldo
 /metedinero dinero  añade dinero a su saldo
-                 
 No tiene limite negativo en el saldo,pero sea consecuente con las deudas
                  '''
 
