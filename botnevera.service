@@ -1,0 +1,12 @@
+[Unit]
+Description=Bot Telegram de la nevera de la onda
+After=network.target
+StartLimitIntervalSec=0
+WorkingDirectory=/home/pi/botnevera/
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/usr/bin/env python3 /home/pi/botnevera/bot_telegram.py
+

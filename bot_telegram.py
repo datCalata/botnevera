@@ -3,6 +3,14 @@ from telegram.ext import CommandHandler, CallbackQueryHandler
 import logging
 from telegram import Bot
 import bot_telegram_callback
+import pathlib
+
+current_dir = pathlib.Path(__file__).parent
+current_file = pathlib.Path(__file__)
+
+print(current_dir)
+print(current_file)
+
 
 updater = Updater(token='460631781:AAEzUbO50_7B7zS3qj-WM89s9pi_9jXdRcU')
 dispatcher = updater.dispatcher

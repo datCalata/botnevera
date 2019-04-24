@@ -1,7 +1,9 @@
 import sqlite3
+import pathlib
 
 def connection():
-    return sqlite3.connect('nevera')
+    current_dir = pathlib.Path(__file__).parent / 'nevera'
+    return sqlite3.connect(current_dir.as_posix())
 
 def close_connection(con):
     con.commit()
