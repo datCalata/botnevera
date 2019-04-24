@@ -10,3 +10,6 @@ RestartSec=1
 User=pi
 ExecStart=/usr/bin/env python3 /home/pi/botnevera/bot_telegram.py
 
+[Install]
+WantedBy=multi-user.target
+
